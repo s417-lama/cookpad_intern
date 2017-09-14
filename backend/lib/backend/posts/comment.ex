@@ -9,7 +9,7 @@ defmodule Backend.Posts.Comment do
     belongs_to :user, User
     belongs_to :post, Post
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   @doc false

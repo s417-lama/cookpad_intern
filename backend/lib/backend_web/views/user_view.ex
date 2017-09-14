@@ -31,7 +31,7 @@ defmodule BackendWeb.UserView do
       level: user.level,
       post_ids: post_ids,
       comment_ids: comment_ids,
-      registerd_at: user.inserted_at,
+      registered_at: DateTime.to_iso8601(user.inserted_at),
       bio: user.bio}
   end
 end
