@@ -225,7 +225,8 @@ main {
       margin-bottom: 8px;
       line-height: 1.25; }
       .postCard__cont__text .bold {
-        color: #000000; }
+        color: #333;
+        font-weight: bold; }
     .postCard__cont__status {
       display: flex;
       justify-content: space-between;
@@ -264,7 +265,124 @@ main {
         -moz-osx-font-smoothing: grayscale; }
       .postCard__button__item.heart:before {
         content: "\e8ae"; }
+      .postCard__button__item.heart:after {
+        content: "応援する"; }
+      .postCard__button__item.heart.active {
+        color: #92AA34; }
+        .postCard__button__item.heart.active:after {
+          content: "応援中"; }
       .postCard__button__item.comment:before {
         content: "\e7d6"; }
       .postCard__button__item.share:before {
-        content: "\e699"; }
+        content: "\e920"; }
+  .postCard__comment {
+    border-top: solid 1px #ddd;
+    padding: 12px 16px; }
+    .postCard__comment__item {
+      display: flex; }
+      .postCard__comment__item:not(:first-child) {
+        margin-top: 16px; }
+      .postCard__comment__item__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%; }
+      .postCard__comment__item__cont {
+        width: calc(100% - 24px - 8px - 16px - 24px);
+        margin-left: 8px;
+        color: #666;
+        font-size: 1.2rem; }
+        .postCard__comment__item__cont .userId {
+          font-weight: bold;
+          color: #333; }
+        .postCard__comment__item__cont__menu {
+          display: flex;
+          margin-top: 8px;
+          font-size: 1rem; }
+          .postCard__comment__item__cont__menu .bold {
+            font-weight: bold; }
+          .postCard__comment__item__cont__menu .comment {
+            font-weight: bold; }
+          .postCard__comment__item__cont__menu *:not(:first-child) {
+            margin-left: 16px; }
+      .postCard__comment__item__thank {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin-top: 16px;
+        margin-left: 16px;
+        border-radius: 50%;
+        border: solid 1px #666; }
+        .postCard__comment__item__thank:before {
+          content: "\e6dd";
+          font-size: 1.6rem;
+          font-family: 'Linearicons';
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          /* Enable Ligatures ================ */
+          -webkit-font-feature-settings: "liga";
+          -moz-font-feature-settings: "liga=1";
+          -moz-font-feature-settings: "liga";
+          -ms-font-feature-settings: "liga" 1;
+          -o-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+          /* Better Font Rendering =========== */
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale; }
+        .postCard__comment__item__thank.active {
+          border: none;
+          background-color: #92AA34; }
+          .postCard__comment__item__thank.active:before {
+            color: #fff; }
+  .postCard__send {
+    display: flex;
+    padding: 12px 16px;
+    border-top: solid 1px #ddd; }
+    .postCard__send__icon {
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%; }
+    .postCard__send__input {
+      width: calc(100% - 24px - 8px - 8px - 20px);
+      height: 24px;
+      padding: 0 8px;
+      background: #EEEEEE;
+      border: 1px solid #DDDDDD;
+      border-radius: 100px;
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 0; }
+    .postCard__send__button:before {
+      content: "\e699";
+      font-size: 1.6rem;
+      font-family: 'Linearicons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Enable Ligatures ================ */
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      -o-font-feature-settings: "liga";
+      font-feature-settings: "liga";
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .postCard__send *:not(:first-child) {
+      margin-left: 8px; }

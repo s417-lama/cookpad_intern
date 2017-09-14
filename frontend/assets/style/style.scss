@@ -213,7 +213,8 @@ main {
       margin-bottom: 8px;
       line-height: 1.25;
       .bold {
-        color: #000000;
+        color: #333;
+        font-weight: bold;
       }
     }
     &__status {
@@ -242,12 +243,124 @@ main {
       &.heart:before {
         content: "\e8ae";
       }
+      &.heart:after {
+        content: "応援する";
+      }
+      &.heart.active {
+        color: #92AA34;
+        &:after {
+          content: "応援中";
+        }
+      }
       &.comment:before {
         content: "\e7d6";
       }
       &.share:before {
-        content: "\e699";
+        content: "\e920";
       }
+    }
+  }
+  &__comment {
+    border-top: solid 1px #ddd;
+    padding: 12px 16px;
+    &__item {
+      display: flex;
+      &:not(:first-child) {
+        margin-top: 16px;
+      }
+      &__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+      }
+      &__cont {
+        width: calc(100% - 24px - 8px - 16px - 24px);
+        margin-left: 8px;
+        color: #666;
+        font-size: 1.2rem;
+        .userId {
+          font-weight: bold;
+          color: #333;
+        }
+        &__menu {
+          display: flex;
+          margin-top: 8px;
+          font-size: 1rem;
+          .normal {
+
+          }
+          .bold {
+            font-weight: bold;
+          }
+          .comment {
+            font-weight: bold;
+          }
+          *:not(:first-child) {
+            margin-left: 16px;
+          }
+        }
+      }
+      &__thank {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin-top: 16px;
+        margin-left: 16px;
+        border-radius: 50%;
+        border: solid 1px #666;
+        &:before {
+          content: "\e6dd";
+          font-size: 1.6rem;
+          @include linearicons;
+        }
+        &.active {
+          border: none;
+          background-color: #92AA34;
+          &:before {
+            color: #fff;
+          }
+        }
+      }
+    }
+  } //comment
+  &__send {
+    display: flex;
+    padding: 12px 16px;
+    border-top: solid 1px #ddd;
+    &__icon {
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+    }
+    &__input {
+      width: calc(100% - 24px - 8px - 8px - 20px);
+      height: 24px;
+      padding: 0 8px;
+      background: #EEEEEE;
+      border: 1px solid #DDDDDD;
+      border-radius: 100px;
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 0;
+    }
+    &__button {
+      &:before {
+        content: "\e699";
+        font-size: 1.6rem;
+        @include linearicons;
+      }
+    }
+    *:not(:first-child) {
+      margin-left: 8px;
     }
   }
 }
