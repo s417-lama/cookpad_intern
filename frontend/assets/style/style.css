@@ -386,3 +386,193 @@ main {
       -moz-osx-font-smoothing: grayscale; }
     .postCard__send *:not(:first-child) {
       margin-left: 8px; }
+
+.user {
+  background-color: #fff;
+  padding: 16px 0 0; }
+  .user__header {
+    display: flex;
+    align-items: center;
+    padding: 0 16px 12px; }
+    .user__header__icon {
+      width: 56px;
+      height: 56px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%; }
+    .user__header__right {
+      width: calc(100% - 16px - 56px);
+      margin-left: 16px; }
+      .user__header__right__follow {
+        /* 72フォロワー: */
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+        color: #666;
+        letter-spacing: 0; }
+        .user__header__right__follow span {
+          color: #666;
+          font-weight: bold; }
+        .user__header__right__follow *:not(:first-child) {
+          margin-left: 16px; }
+      .user__header__right__function {
+        display: flex;
+        flex-wrap: wrap; }
+        .user__header__right__function.follow button {
+          border: none;
+          background-color: #92AA34;
+          color: #fff; }
+          .user__header__right__function.follow button.main {
+            width: calc(100% - 4px - 20px); }
+            .user__header__right__function.follow button.main:before {
+              content: "\e71f"; }
+            .user__header__right__function.follow button.main:after {
+              content: "フォローする"; }
+        .user__header__right__function.following button.main {
+          width: calc(100% - 8px - 40px); }
+          .user__header__right__function.following button.main:before {
+            content: "\e699"; }
+          .user__header__right__function.following button.main:after {
+            content: "メッセージ"; }
+        .user__header__right__function.myPage button.main {
+          width: calc(100% - 4px - 20px); }
+          .user__header__right__function.myPage button.main:before {
+            content: "\e60d"; }
+          .user__header__right__function.myPage button.main:after {
+            content: "プロフィールを編集する"; }
+        .user__header__right__function button {
+          height: 20px;
+          border: solid 1px #ddd;
+          border-radius: 4px; }
+          .user__header__right__function button:before {
+            font-family: 'Linearicons';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            /* Enable Ligatures ================ */
+            -webkit-font-feature-settings: "liga";
+            -moz-font-feature-settings: "liga=1";
+            -moz-font-feature-settings: "liga";
+            -ms-font-feature-settings: "liga" 1;
+            -o-font-feature-settings: "liga";
+            font-feature-settings: "liga";
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: bold; }
+          .user__header__right__function button.main {
+            padding: 0 4px; }
+            .user__header__right__function button.main:before {
+              margin-right: 4px; }
+          .user__header__right__function button.cog:before {
+            content: "\e672"; }
+          .user__header__right__function button.user:before {
+            content: "\e71e"; }
+          .user__header__right__function button.down:before {
+            content: "\e93a"; }
+          .user__header__right__function button.min {
+            width: 20px;
+            padding: 0; }
+          .user__header__right__function button:not(:first-child) {
+            margin-left: 4px; }
+  .user__name {
+    margin-bottom: 8px;
+    padding: 0 16px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 1; }
+  .user__text {
+    margin-bottom: 16px;
+    padding: 0 16px;
+    font-size: 1.2rem;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 1.25; }
+  .user__menu {
+    display: flex;
+    border-top: solid 1px #ddd; }
+    .user__menu__item {
+      width: calc(100% / 2);
+      padding: 12px 0;
+      font-size: 1.2rem;
+      text-align: center; }
+      .user__menu__item .bold {
+        font-weight: bold; }
+      .user__menu__item.active {
+        color: #92AA34; }
+        .user__menu__item.active:before {
+          color: #92AA34; }
+      .user__menu__item.dish:before {
+        content: "\e811"; }
+      .user__menu__item.comment:before {
+        content: "\e7d6"; }
+      .user__menu__item:before {
+        font-size: 1.2rem;
+        margin-right: 4px;
+        font-family: 'Linearicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Enable Ligatures ================ */
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        -o-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+  .user__images {
+    display: flex;
+    flex-wrap: wrap; }
+    .user__images__item {
+      width: calc((100vw - 2px) / 3);
+      height: calc((100vw - 2px) / 3);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .user__images__item:not(:nth-child(3n+1)) {
+        margin-left: 1px; }
+      .user__images__item:nth-child(n+4) {
+        margin-top: 1px; }
+  .user__comment__item {
+    display: flex;
+    padding: 12px 16px;
+    font-size: 1.2rem; }
+    .user__comment__item__image {
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 4px; }
+    .user__comment__item__right {
+      width: calc(100% - 16px - 40px);
+      margin-left: 16px; }
+      .user__comment__item__right__title {
+        margin-bottom: 4px;
+        color: #666; }
+        .user__comment__item__right__title .bold {
+          font-weight: bold;
+          color: #333; }
+      .user__comment__item__right__text {
+        margin-bottom: 4px;
+        line-height: 1.25;
+        color: #666; }
+      .user__comment__item__right__foot .date {
+        color: #999; }
+      .user__comment__item__right__foot .thank {
+        margin-left: 16px;
+        color: #999;
+        font-weight: bold; }
+    .user__comment__item:not(:first-child) {
+      border-top: solid 1px #ddd; }
