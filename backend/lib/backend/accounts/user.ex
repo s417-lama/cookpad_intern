@@ -14,7 +14,7 @@ defmodule Backend.Accounts.User do
     has_many :posts, Post
     has_many :comments, Comment
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   @doc false

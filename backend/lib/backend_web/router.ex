@@ -17,6 +17,8 @@ defmodule BackendWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/detail/:id", DetailController, :index
+    get "/user_profile/:id", UserProfileController, :index
   end
 
   # Other scopes may use custom stacks.
