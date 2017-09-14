@@ -13,7 +13,7 @@ $(function() {
                                 <img style="background-image: url(\'data:image/png;base64,'+user.icon+'\');" alt="">\
                             </div>\
                             <div class="postCard__head__info">\
-                                <p class="postCard__head__info__name">'+user.username+'</p>\
+                                <a href="/user_profile/'+user.id+'" style="text-decoration: none;"><p class="postCard__head__info__name">'+user.username+'</p></a>\
                                 <p class="postCard__head__info__date">'+datetime.getMonth()+'月'+datetime.getDate()+'日('+weekdays[datetime.getDay()]+') '+datetime.getHours()+':'+datetime.getMinutes()+'</p>\
                             </div>\
                             <button class="postCard__head__follow"></button>\
@@ -25,7 +25,7 @@ $(function() {
                         </div>\
                         <div class="postCard__cont">\
                             <p class="postCard__cont__text">\
-                            <span class="bold">'+user.userid+'</span> '+post.description+'</p>\
+                            <a href="/user_profile/'+user.id+'" style="text-decoration: none;"><span class="bold">'+user.userid+'</span></a> '+post.description+'</p>\
                             <div class="postCard__cont__status">\
                                 <p class="cheernum post'+post.id+'">'+post.cheer+'人が応援中</p>\
                                 <a href="/detail/'+post.id+'"><button>コメント'+post.comment_ids.length+'件</button></a>\
