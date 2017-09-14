@@ -24,6 +24,7 @@ defmodule BackendWeb.PostView do
       title: post.title,
       comment_ids: comment_ids,
       user_id: post.user_id,
+      registered_at: post.inserted_at,
       tags: post.tags}
   end
 end

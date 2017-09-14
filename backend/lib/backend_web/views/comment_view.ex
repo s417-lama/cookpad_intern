@@ -14,6 +14,7 @@ defmodule BackendWeb.CommentView do
     %{id: comment.id,
       user_id: comment.user_id,
       post_id: comment.post_id,
+      registered_at: comment.inserted_at,
       text: comment.text}
   end
 end

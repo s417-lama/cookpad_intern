@@ -5,7 +5,7 @@ defmodule Backend.Posts.Post do
   alias Backend.Accounts.User
 
   schema "posts" do
-    field :cheer, :integer
+    field :cheer, :integer, default: 0
     field :description, :string
     field :image, :binary
     field :title, :string
