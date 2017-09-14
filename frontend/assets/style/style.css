@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@import url(sanitize.css);
+@font-face {
+  font-family: 'Linearicons';
+  src: url("../fonts/Linearicons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+:root {
+  font-size: 62.5%;
+  font-weight: 400; }
+
+html {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic proN", YuGothic, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  html body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F0F0E6; }
+    html body header, html body main, html body footer {
+      min-width: 375px;
+      width: 100%;
+      margin: 0 auto; }
+    html body footer {
+      margin-top: auto; }
+    html body a {
+      color: inherit; }
+      html body a:hover {
+        color: inherit; }
+    html body button {
+      border: 0;
+      background-color: #fff;
+      outline: none;
+      cursor: pointer; }
+    html body ul li {
+      list-style-type: none; }
+
+header {
+  position: relative; }
+
+main {
+  padding: 56px 0 0; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  /* Rectangle 2: */
+  margin-bottom: 24px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(170, 170, 170, 0.5);
+  z-index: 20; }
+  .header h1 {
+    /* だめレポ: */
+    font-size: 16px;
+    color: #92AA34;
+    letter-spacing: 0; }
+
+.timeline {
+  padding: 0 16px; }
+  .timeline__element:not(:first-child) {
+    margin-top: 24px; }
+
+.postCard {
+  width: 100%;
+  padding: 12px 0 0;
+  background: #fff;
+  box-shadow: 0 4px 8px 2px rgba(170, 170, 170, 0.5);
+  border-radius: 4px; }
+  .postCard__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 0 16px; }
+    .postCard__head__icon {
+      width: 32px;
+      height: 32px; }
+      .postCard__head__icon img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%; }
+    .postCard__head__info {
+      margin-left: 8px; }
+      .postCard__head__info__name {
+        font-size: 1.2rem;
+        color: #222;
+        letter-spacing: 0; }
+      .postCard__head__info__date {
+        /* 9月14日(木) 17:05: */
+        font-size: .8rem;
+        color: #AAA;
+        letter-spacing: 0; }
+    .postCard__head__follow {
+      margin-left: auto;
+      padding: 0 8px;
+      /* Rectangle: */
+      background: #FFFFFF;
+      border: 1px solid #92AA34;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      color: #92AA34;
+      letter-spacing: 0; }
+      .postCard__head__follow:before {
+        content: "\e71f";
+        font-family: 'Linearicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Enable Ligatures ================ */
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        -o-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: bold;
+        margin-right: 4px; }
+      .postCard__head__follow:after {
+        content: "フォローする"; }
+      .postCard__head__follow.active:before {
+        content: "\e71e"; }
+      .postCard__head__follow.active:after {
+        content: "フォロー中"; }
+    .postCard__head__menu {
+      margin-left: 8px; }
+      .postCard__head__menu:before {
+        padding: 0 4px;
+        content: "\e9e9";
+        font-size: 1.2rem;
+        font-family: 'Linearicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Enable Ligatures ================ */
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        -o-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+  .postCard__image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 12px; }
+    .postCard__image__title {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      display: inline-block;
+      padding: 4px 8px;
+      box-shadow: 0 4px 8px 2px rgba(136, 136, 136, 0.5);
+      border-radius: 4px;
+      /* dinner: */
+      background: #fff;
+      /* 若鶏の唐揚げ: */
+      font-size: 1.2rem;
+      color: #92AA34;
+      line-height: 1;
+      letter-spacing: 0; }
+      .postCard__image__title:before {
+        content: "\e811";
+        margin-right: 4px;
+        font-family: 'Linearicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Enable Ligatures ================ */
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        -o-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: bold; }
+    .postCard__image__cont {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .postCard__cont {
+    margin-bottom: 12px;
+    padding: 0 16px; }
+    .postCard__cont__text {
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+      line-height: 1.25; }
+      .postCard__cont__text .bold {
+        color: #000000; }
+    .postCard__cont__status {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666666;
+      letter-spacing: 0; }
+  .postCard__button {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px #ddd; }
+    .postCard__button__item {
+      width: calc(100% / 3);
+      padding: 12px 0;
+      font-size: 1.2rem; }
+      .postCard__button__item:before {
+        content: "";
+        margin-right: 4px;
+        font-size: 1.2rem;
+        line-height: 1;
+        font-family: 'Linearicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Enable Ligatures ================ */
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        -o-font-feature-settings: "liga";
+        font-feature-settings: "liga";
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+      .postCard__button__item.heart:before {
+        content: "\e8ae"; }
+      .postCard__button__item.comment:before {
+        content: "\e7d6"; }
+      .postCard__button__item.share:before {
+        content: "\e699"; }
