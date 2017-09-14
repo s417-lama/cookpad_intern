@@ -51,6 +51,36 @@ header {
 main {
   padding: 56px 0 0; }
 
+.prevButton {
+  position: absolute;
+  top: calc((32px - 16px) / 2);
+  left: 16px;
+  z-index: 21;
+  line-height: 1; }
+  .prevButton:before {
+    content: "\e93b";
+    font-family: 'Linearicons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Enable Ligatures ================ */
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #92AA34;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1; }
+
 .header {
   position: fixed;
   top: 0;

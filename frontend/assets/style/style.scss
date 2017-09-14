@@ -62,6 +62,21 @@ header {
 main {
   padding: 56px 0 0;
 }
+.prevButton {
+  position: absolute;
+  top: calc((32px - 16px) / 2);
+  left: 16px;
+  z-index: 21;
+  line-height: 1;
+  &:before {
+    content: "\e93b";
+    @include linearicons;
+    color: #92AA34;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}
 .header {
   position: fixed;
   top: 0;
