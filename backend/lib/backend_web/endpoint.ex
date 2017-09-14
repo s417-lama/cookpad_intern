@@ -19,6 +19,8 @@ defmodule BackendWeb.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  plug Plug.Static, at: "/assets", from: "priv/static/assets"
+
   plug Plug.RequestId
   plug Plug.Logger
 
