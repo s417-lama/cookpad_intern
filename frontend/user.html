@@ -13,12 +13,12 @@
   <title>Document</title>
 </head>
 <body>
-  <%= if @user_id !== "1" do %>
   <header class="header">
-    <a href="javascript:history.back()"><button class="prevButton" type="button" name="button"></button></a>
+  <%= if @user_id !== "1" do %>
+    <button class="prevButton" type="button" name="button"></button>
+  <% end %>
     <h1 class="titlename"></h1>
   </header>
-  <% end %>
   <main>
     <div class="user">
       <div class="user__header">
@@ -59,12 +59,10 @@
     </div>
     </div><!-- /.user-->
   </main>
-  <%= if @user_id === "1" do %>
   <footer class="footer">
     <button class="footer__item home" type="button" name="button">ホーム</button>
     <button class="footer__item search" type="button" name="button">さがす</button>
-    <button class="footer__item user active" type="button" name="button">MYページ</button>
+    <button class="footer__item user <%= if @user_id === "1" do %>active<% end %>" type="button" name="button">MYページ</button>
   </footer>
-  <% end %>
 </body>
 </html>

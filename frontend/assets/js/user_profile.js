@@ -11,8 +11,11 @@ $(function() {
             $.get("/api/posts/"+post_id, function(data2) {
                 var post = data2.data;
                 $(".user__images").append('\
-                    <a href="/detail/'+post.id+'" style="text-decoration: none;"><button class="user__images__item" style="background-image: url(\'data:image/jpeg;base64,'+post.image+'\');"></button></a>\
+                    <button class="user__images__item post'+post.id+'" style="background-image: url(\'data:image/jpeg;base64,'+post.image+'\');"></button>\
                 ');
+                $(".user__images__item.post"+post.id).click(function() {
+                    location.href = "/detail/"+post.id;
+                });
             });
         });
         user.comment_ids.forEach(function(comment_id) {
@@ -26,7 +29,7 @@ $(function() {
                             <div class="user__comment__item">\
                               <div class="user__comment__item__image" style="background-image: url(\'data:image/jpeg;base64,'+comment_post.image+'\');"></div>\
                               <div class="user__comment__item__right">\
-                                <p class="user__comment__item__right__title"><a href="/user_profile/'+comment_user.id+'" style="text-decoration: none;"><button class="bold">'+comment_user.username+'</button></a>さんが作った<a href="/detail/'+comment_post.id+'" style="text-decoration: none;"><button class="bold">'+comment_post.title+'</button></a>へのコメント</p>\
+                                <p class="user__comment__item__right__title"><button class="bold user'+comment_user.id+'">'+comment_user.username+'</button>さんが作った<button class="bold post'+comment_post.id+'">'+comment_post.title+'</button>へのコメント</p>\
                                 <p class="user__comment__item__right__text">'+comment.text+'</p>\
                                 <div class="user__comment__item__right__foot">\
                                   <button class="date">1週間前</button>\
@@ -35,6 +38,12 @@ $(function() {
                               </div>\
                             </div>\
                         ');
+                        $(".bold.user"+comment_user.id).click(function() {
+                            location.href = "/user_profile/"+comment_user.id;
+                        });
+                        $(".bold.post"+comment_post.id).click(function() {
+                            location.href = "/detail/"+comment_post.id;
+                        });
                     });
                 });
             });
@@ -59,5 +68,11 @@ $(function() {
     $(".user__comment").hide();
     $(".footer__item.home").click(function() {
         window.location.href = "/";
+    });
+    $(".footer__item.user").click(function() {
+        window.location.href = "/user_profile/1";
+    });
+    $(".prevButton").click(function() {
+        history.back();
     });
 });
