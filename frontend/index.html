@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -12,15 +12,19 @@
   <title>Document</title>
 </head>
 <body>
+  <header class="header">
+    <h1>ダメレポ</h1>
+    <button class="sendButton" type="button" name="button"></button>
+  </header>
 
   <main>
     <ul class="timeline">
     </ul><!-- /.timeline-->
   </main>
   <footer class="footer">
-    <button class="footer__item home active" type="button" name="button">ホーム</button>
-    <button class="footer__item search" type="button" name="button">さがす</button>
-    <button class="footer__item user" type="button" name="button">MYページ</button>
+    <button class="footer__item home active" type="button" name="button"><span>ホーム</span></button>
+    <button class="footer__item search" type="button" name="button"><span>さがす</span></button>
+    <button class="footer__item user" type="button" name="button"><span>MYページ</span></button>
   </footer>
 </body>
 </html>

@@ -128,15 +128,16 @@ footer {
   height: 48px;
   background-color: #fff;
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: calc(100% / 3);
-    padding: 4px 0;
+    padding: 7px 0;
     font-size: .8rem;
     line-height: 1;
+    span {
+      display: block;
+      width: 100%;
+    }
     &:before {
+      width: 100%;
       display: block;
       margin-bottom: 4px;
       @include linearicons;
@@ -154,7 +155,7 @@ footer {
       }
     }
     &.user {
-      padding: 4px 0;
+      padding: 7px 0;
       &:before {
         content: "\e71e";
       }
@@ -199,6 +200,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 50%;
+        border: solid 1px #ddd;
       }
     }
     &__info {
@@ -361,6 +363,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 50%;
+        border: solid 1px #ddd;
       }
       &__cont {
         width: calc(100% - 24px - 8px - 16px - 24px);
@@ -390,9 +393,7 @@ footer {
         }
       }
       &__thank {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
         width: 24px;
         height: 24px;
         margin-top: 16px;
@@ -400,6 +401,9 @@ footer {
         border-radius: 50%;
         border: solid 1px #666;
         &:before {
+          position: absolute;
+          top: calc((24px - 18px) / 2);
+          left: calc((24px - 18px) / 2);
           content: "\e6dd";
           font-size: 1.6rem;
           @include linearicons;
@@ -425,6 +429,7 @@ footer {
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 50%;
+      border: solid 1px #ddd;
     }
     &__input {
       width: calc(100% - 24px - 8px - 8px - 20px);
@@ -464,6 +469,7 @@ footer {
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 50%;
+      border: solid 1px #ddd;
     }
     &__right {
       width: calc(100% - 16px - 56px);
