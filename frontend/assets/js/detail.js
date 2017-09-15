@@ -1,5 +1,4 @@
 $(function() {
-    var post_id = 1;
     $.get("/api/posts/"+post_id, function(data) {
         var post = data.data;
         console.log(post);

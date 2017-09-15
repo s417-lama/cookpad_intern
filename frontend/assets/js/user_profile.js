@@ -1,5 +1,4 @@
 $(function() {
-    var user_id = 1;
     $.get("/api/users/"+user_id, function(data) {
         var user = data.data;
         $(".titlename").text(user.username+"の投稿");
@@ -21,7 +20,7 @@ $(function() {
                 var comment = data2.data;
                 $.get("/api/posts/"+comment.post_id, function(data3) {
                     var comment_post = data3.data;
-                    $.get("/api/users/"+comment.user_id, function(data4) {
+                    $.get("/api/users/"+comment_post.user_id, function(data4) {
                         var comment_user = data4.data;
                         $(".user__comment").append('\
                             <div class="user__comment__item">\
@@ -58,4 +57,7 @@ $(function() {
         }
     });
     $(".user__comment").hide();
+    $(".footer__item.home").click(function() {
+        window.location.href = "/";
+    });
 });

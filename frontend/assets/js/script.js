@@ -60,4 +60,7 @@ $(function() {
             });
         });
     });
+    $(".footer__item.user").click(function() {
+        window.location.href = "/user_profile/1";
+    });
 });

@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/style/style.css">
   <script src="/assets/js/jquery.min.js"></script>
+  <script> user_id = <%= @user_id %>; </script>
   <script src="/assets/js/user_profile.js"></script>
   <title>Document</title>
 </head>
 <body>
+  <%= if @user_id !== "1" do %>
   <header class="header">
+    <a href="javascript:history.back()"><button class="prevButton" type="button" name="button"></button></a>
     <h1 class="titlename"></h1>
   </header>
+  <% end %>
   <main>
     <div class="user">
       <div class="user__header">
@@ -22,6 +28,7 @@
             <button type="button" name="button"><span>72</span>フォロワー</button>
             <button type="button" name="button"><span>100</span>フォロー</button>
           </div>
+          <%= if @user_id !== "1" do %>
           <div class="user__header__right__function follow">
             <button class="main" type="button" name="button"></button>
             <button class="min down" type="button" name="button"></button>
@@ -31,10 +38,12 @@
             <button class="min user" type="button" name="button"></button>
             <button class="min down" type="button" name="button"></button>
           </div>
+          <% else %>
           <div class="user__header__right__function myPage">
             <button class="main" type="button" name="button"></button>
             <button class="min cog" type="button" name="button"></button>
           </div>
+          <% end %>
         </div>
       </div>
       <p class="user__name"></p>
@@ -50,8 +59,12 @@
     </div>
     </div><!-- /.user-->
   </main>
-  <footer>
-
+  <%= if @user_id === "1" do %>
+  <footer class="footer">
+    <button class="footer__item home" type="button" name="button">ホーム</button>
+    <button class="footer__item search" type="button" name="button">さがす</button>
+    <button class="footer__item user active" type="button" name="button">MYページ</button>
   </footer>
+  <% end %>
 </body>
 </html>
