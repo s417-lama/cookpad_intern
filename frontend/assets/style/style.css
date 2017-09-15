@@ -133,6 +133,7 @@ main {
   .header h1 {
     /* だめレポ: */
     font-size: 16px;
+    font-weight: normal;
     color: #92AA34;
     letter-spacing: 0; }
 
@@ -620,7 +621,8 @@ footer {
     line-height: 1.25; }
   .user__menu {
     display: flex;
-    border-top: solid 1px #ddd; }
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd; }
     .user__menu__item {
       width: calc(100% / 2);
       padding: 12px 0;
