@@ -136,6 +136,8 @@ main {
     font-weight: normal;
     color: #92AA34;
     letter-spacing: 0; }
+    .header h1 img {
+      width: 100px; }
 
 footer {
   position: fixed;
