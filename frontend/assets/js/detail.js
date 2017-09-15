@@ -1,11 +1,11 @@
 $(function() {
     $.get("/api/posts/"+post_id, function(data) {
         var post = data.data;
-        console.log(post);
         var datetime = new Date(post.registered_at);
         var weekdays = ["日","月","火","水","木","金","土"];
         $.get("/api/users/"+post.user_id, function(data2) {
             var user = data2.data;
+            $(".titlename").text(user.username+"の投稿");
             $(".postCard__head__info__name").text(user.username).click(function() {
                 location.href = "/user_profile/"+user.id;
             });

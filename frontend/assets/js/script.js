@@ -1,6 +1,11 @@
 $(function() {
     $.get("/api/posts", function(data) {
         var posts = data.data;
+        posts.sort(function(a, b) {
+            if(a.registered_at > b.registered_at) return 1;
+            else return -1;
+        });
+        console.log(posts);
         posts.forEach(function(post) {
             var datetime = new Date(post.registered_at);
             var weekdays = ["日","月","火","水","木","金","土"];
