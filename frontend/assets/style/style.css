@@ -489,7 +489,8 @@ footer {
       background: #EEEEEE;
       border: 1px solid #DDDDDD;
       border-radius: 100px;
-      font-size: 12px;
+      font-size: 1.6rem;
+      transform: scale(0.75);
       color: #666;
       letter-spacing: 0; }
     .postCard__send__button:before {
